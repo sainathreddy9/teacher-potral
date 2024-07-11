@@ -1,0 +1,11 @@
+#simpleBox{
+border: 1px SOLID BLACK;
+width:400px;
+padding:25px;
+vertical-align: middle;
+background-color:#dddddd;
+}
+#textAlign
+{
+	text-align: center;
+}s

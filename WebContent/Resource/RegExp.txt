@@ -1,0 +1,21 @@
+public class regx
+{
+
+	public static void main(String[] args) 
+	{
+		String phn_ptrn ="[0-9]{10}";
+		String phone = "1234367890";
+		boolean b = Pattern.matches(phn_ptrn,phone);
+		System.out.println("patern match :"+Pattern.matches(phn_ptrn,phone));
+		String reg1 = "[\\w _]+\\.?[\\w _]+@\\w+\\.[a-z]{2,3}";
+		String data = "vinay@monkey.com";
+		System.out.println("patern match :"+Pattern.matches(reg1,data));
+	
+	}
+}
+
+
+
+		String name_regex="\\w{1,20}";
+		String mailId_regex="\\w+\\@\\w+\\.[a-zA-Z]{2,3}";
+		String phone_regex="[0-9]{10}";

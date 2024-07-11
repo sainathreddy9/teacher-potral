@@ -1,0 +1,173 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>I T University</title>
+
+<link rel="stylesheet" href="HomePage.css" />
+<script type="text/javascript" src="HomePage.js"></script>
+<link rel="stylesheet" type="text/css" href="StudentRegistration.css"></link>
+<script src="StudentRegistration.js">
+</script>
+
+</head>
+<body class="verticalLine" onload="slideit()">
+
+	<div class="stay">
+		<a href="#" class="head1">Home </a>| <a href="#" class="head1">Home
+		</a>| <a href="#" class="head1">Home </a>| <a href="#" class="head1">Home
+		</a>| <a href="#" class="head1">Home </a>| <a href="#" id="form"
+			class="head1">Track Status </a>| <a href="#" class="head1">Contact
+			us </a>| <a href="#" class="head1">Log in </a>| <a href="#" class="head1">Admin
+			sign up</a>
+	</div>
+
+
+	<div class="stay1"></div>
+
+
+	<div class="Head1">
+		<img id="logo" alt="Logo" src="..\Images\winedom.png" />
+		<h1 class="welcomeH1">iTechnological University</h1>
+	</div>
+
+
+	<div class="mainContent">
+	<form name="form1" action="gues.html" onsubmit="return validateForm();">
+<table border="0" class="tableStyle">
+	<caption>
+	<h2> APPLICATION FORM</h2>
+	</caption>
+
+
+	<tr>
+		<td>Applicant's Name:</td>
+		<td><input type="text" name="name1" onblur="validateName()" onfocus="nameClear()"></td>
+		<td id="text1" class="errormsg"></td>
+	</tr>
+
+	<tr>
+		<td>Highest Qualification</td>
+		<td colspan="2"><input type="text" name="name"></td>
+
+	</tr>
+
+	<tr>
+		<td>Date of birth</td>
+		<td><input type="date" name="dob" onfocus="dobClear()" onblur="validateDob()"></td>
+		<td id="text3" class="errormsg"></td>
+	</tr>
+
+	<tr>
+		<td>Email-id</td>
+		<td><input type="text" name="email" onblur="emailValidation()" onfocus="emailClear()"/></td>
+		<td id="text5" class="errormsg"></td>
+	</tr>
+
+	<tr>
+		<td>Goals</td>
+		<td><textarea rows="3" cols="50" name="Goals" onblur="validateGoals()" onfocus="addressClear()"></textarea></td>
+		<td id="text7" class="errormsg"></td>
+	</tr>
+</table>
+<br/><hr/><br/>
+<table class="tableStyle" border=3;>
+	<caption><h2>Educational Qualification</h2></caption>
+	<tr>
+		<th>School/College</th>
+		<th>Percentage %</th>
+		<th>Year of passing</th>
+	</tr>
+
+	<tr>
+		<td><input type="text" name="school1"/></td>
+		<td><input type="text" name="per1"/></td>
+		<td><input type="text" name="year1"/></td>
+		
+		</tr><tr>
+		<td><input type="text" name="school2"/></td>
+		<td><input type="text" name="per2"/></td>
+		<td><input type="text" name="year2"/></td>
+		
+	
+	</tr>
+</table>
+<p id="text8" class="errormsg"></p>
+<input type="submit" value="submit" ></input>
+</form>
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+		<br />
+		<br />
+	</div>
+	
+
+
+	<div class="footMain">
+		<div class="leftMenu">
+			<h3 style="border-bottom: 1px dotted white;">About DSATM</h3>
+			<ul>
+				<li><a class="finalAnchor" href="a">History</a><br />
+				<br /></li>
+				<li><a class="finalAnchor" href="a">Affiliated Colleges</a><br />
+				<br /></li>
+				<li><a class="finalAnchor" href="a">Syllabus</a><br />
+				<br /></li>
+			</ul>
+		</div>
+
+		<div class="middleMenu" class="bottomMenu">
+			<h3 style="border-bottom: 1px dotted white;">Admissions</h3>
+			<ul>
+				<li><a class="finalAnchor" href="a">Eligibility</a><br />
+				<br /></li>
+				<li><a class="finalAnchor" href="a">Fee structure</a><br />
+				<br /></li>
+				<li><a class="finalAnchor" href="a">Courses offered</a><br />
+				<br /></li>
+			</ul>
+		</div>
+
+		<div class="rightMenu" class="bottomMenu">
+			<h3 style="border-bottom: 1px dotted white;">Contact Us</h3>
+			<ul>
+				<li><a class="finalAnchor" href="a">Contact Number</a><br />
+				<br /></li>
+				<li><a class="finalAnchor" href="a">Route Map</a><br />
+				<br /></li>
+				<li><a class="finalAnchor" href="a">Email us</a><br />
+				<br /></li>
+			</ul>
+		</div>
+
+
+
+		<div class="footSub">
+			<div class="lastMenu">
+				<p class="inlineClass">Powered By:</p>
+				<p class="inlineClass" style="color: orange; padding-right: 100px;">Apache
+					Server 6</p>
+				<p class="inlineClass" style="padding-right: 100px;">©Balu: All
+					Rights Reserved</p>
+				<a href="#" class="head1">Page Top</a>| <a href="#" class="head1">Feed
+					Back</a>| <a href="#" class="head1">Contact Us</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

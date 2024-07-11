@@ -1,0 +1,77 @@
+CREATE TABLE Application 
+(
+ application_id NUMBER(6) PRIMARY KEY,
+ full_name VARCHAR2(20), 
+ date_of_birth DATE, 
+ highest_Qualification VARCHAR2(10), 
+ marks_Obtained NUMBER, 
+ goals VARCHAR2(20), 
+ email_Id varchar2(30), 
+ scheduled_Program_Id VARCHAR2(5), 
+ status VARCHAR2(15) CHECK(status IN('applied','accepted','not_eligible','confirmed','rejected')),
+ date_Of_Interview DATE
+);
+
+drop table Application;
+
+
+
+
+CREATE TABLE Programs_Offered 
+(
+ scheduled_Program_Id VARCHAR2(5) REFERENCES Programs_Scheduled(scheduled_Program_Id) ON DELETE CASCADE, 
+ description VARCHAR2(20), 
+ applicant_Eligibility VARCHAR2(40) , 
+ duration NUMBER(1), 
+ degree_Certificate_Offered VARCHAR2(10)
+);
+
+drop table Programs_Offered;
+
+
+
+
+CREATE TABLE Programs_Scheduled
+(
+ scheduled_Program_Id VARCHAR2(5) PRIMARY KEY, 
+ program_Name VARCHAR2(30), 
+ location VARCHAR2(15), 
+ start_Date DATE,  
+ end_Date DATE,  
+ sessions_Per_Week NUMBER(2)
+);
+
+drop table Programs_Scheduled;
+
+INSERT INTO Programs_Scheduled VALUES ('&scheduled_Program_Id',(SELECT COURSES FROM specialization WHERE SERIAL_NUMBER = &serialNumber),'Bangalore','&sDate','&eDate',5);
+
+
+CREATE TABLE Participant 
+(
+ roll_No VARCHAR2(5),
+ email_Id VARCHAR2(20), 
+ application_Id NUMBER(6) REFERENCES Application(application_Id) ON DELETE CASCADE,
+ scheduled_Program_Id VARCHAR2(5)
+);
+
+drop table Participant; 
+
+
+CREATE TABLE Users 
+(
+ login_Id VARCHAR2(20), 
+ password VARCHAR2(20), 
+ role VARCHAR2(5) CHECK(role IN('admin','mac'))  
+);
+
+drop table Users;
+
+CREATE SEQUENCE Applicant_ID
+START WITH 10000
+MAXVALUE 999999
+NOCYCLE
+
+
+
+
+
